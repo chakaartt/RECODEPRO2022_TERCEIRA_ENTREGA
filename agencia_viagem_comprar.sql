@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `agencia_viagem` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `agencia_viagem`;
 -- MySQL dump 10.13  Distrib 8.0.29, for Win64 (x86_64)
 --
 -- Host: localhost    Database: agencia_viagem
@@ -25,10 +23,10 @@ DROP TABLE IF EXISTS `comprar`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `comprar` (
-  `id_compra` int NOT NULL,
+  `id_compra` int NOT NULL AUTO_INCREMENT,
   `id_cliente` int DEFAULT NULL,
   `id_viagem` int DEFAULT NULL,
-  `data_compra` datetime DEFAULT NULL,
+  `data_compra` date DEFAULT NULL,
   PRIMARY KEY (`id_compra`),
   KEY `id_cliente_idx` (`id_cliente`),
   KEY `id_viagem_idx` (`id_viagem`),
@@ -55,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-15 23:35:00
+-- Dump completed on 2022-10-23 17:09:40
